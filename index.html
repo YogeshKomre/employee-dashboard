@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Employee Performance Dashboard</h1>
+            <div class="file-upload">
+                <input type="file" id="fileInput" accept=".xlsx, .xls, .csv">
+                <label for="fileInput">Upload Excel File</label>
+            </div>
+        </header>
+
+        <div id="topPerformer" class="top-performer">
+            <h2>🏆 Top Performing Manager</h2>
+            <div id="topManagerInfo" class="manager-info"></div>
+        </div>
+
+        <div class="filters">
+            <select id="managerFilter">
+                <option value="">All Managers</option>
+            </select>
+            <select id="metricFilter">
+                <option value="all">All Metrics</option>
+                <option value="mobileSales">Mobile Sales</option>
+                <option value="fiberSales">Fiber Sales</option>
+                <option value="promoter">Promoter Performance</option>
+                <option value="videoPackage">Video Package Sales</option>
+            </select>
+        </div>
+
+        <div id="dashboard" class="dashboard">
+            <div class="manager-cards" id="managerCards"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

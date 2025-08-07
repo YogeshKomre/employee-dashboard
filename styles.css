@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #ecf0f1;
+    --card-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload {
+    margin-top: 15px;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload label {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-upload label:hover {
+    background-color: #2980b9;
+}
+
+.top-performer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.manager-info {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    flex: 1;
+    max-width: 48%;
+}
+
+.manager-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.manager-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.manager-card:hover {
+    transform: translateY(-5px);
+}
+
+.manager-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.manager-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.employee-list {
+    margin-top: 15px;
+}
+
+.employee-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.employee-name {
+    font-weight: 500;
+}
+
+.employee-score {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.highlight {
+    background-color: #fffde7;
+}
+
+.top-performer .manager-card {
+    border: 2px solid #f1c40f;
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+    
+    select {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .manager-cards {
+        grid-template-columns: 1fr;
+    }
+}
